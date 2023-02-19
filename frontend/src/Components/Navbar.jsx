@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar">
     <Button colorScheme={"blue"}>Fetch Users</Button>
     <Button colorScheme={"red"}>Delete Users</Button>
-    <Button color={"red"}>Fetch Users</Button>
+    
     
     
     </div>

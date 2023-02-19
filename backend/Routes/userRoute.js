@@ -4,12 +4,31 @@ const { userModel } = require("../Models/userModel");
 const userController = Router();
 
 userController.get("/get-user", async (req, res) => {
+  console.log(req.body)  
   const userData= await userModel.find();
   console.log(userData)
   res.send({userData})
 
 });
+// for male users
 
+userController.get("/get-user/male", async (req, res) => {
+    console.log(req.body)  
+    const userData= await userModel.find({"gender":"male"});
+    console.log(userData)
+    res.send({userData})
+  
+  });
+
+
+  // for filter female user
+  userController.get("/get-user/female", async (req, res) => {
+    console.log(req.body)  
+    const userData= await userModel.find({"gender":"female"});
+    console.log(userData)
+    res.send({userData})
+  
+  });
 
 // add data to mongodb
 userController.get("/userdb",async (req,res)=>{
