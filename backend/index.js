@@ -1,20 +1,25 @@
-const {connection} = require(".//Config/db")
-const express = require('express');
-const app= express();
+const { connection } = require(".//Config/db");
+const express = require("express");
+const app = express();
+const cors = require("cors");
+app.use(express.json());
+app.use(cors());
 
-app.get("/",(req,res)=>{
-            res.send("Welcome to cointab")
-})
+const { userController } = require("./Routes/userRoute");
 
+app.get("/", (req, res) => {
+  res.send("Welcome to cointab");
+});
 
-app.listen(8000,async()=>{
-try{    
-await 
+app.use("/", userController);
 
-console.log("Database connected")
-console.log("Listening on port 8000")
-}catch(err){
-console.log({err})
-}
+app.listen(8000, async () => {
+  try {
+    await connection;
 
-})
+    console.log("Database connected");
+    console.log("Listening on port 8000");
+  } catch (err) {
+    console.log({ err });
+  }
+});

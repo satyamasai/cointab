@@ -45,3 +45,29 @@
   justify-content: space-around;
   align-items: center;
 }
+.home{
+  width: 100vw;
+background-color: #282c34;
+height: 100vh;
+/* display: flex; */
+/* justify-content: space-around; */
+box-sizing: border-box;
+display: inline-block;
+}
+.home>div{
+  width: 80vw;
+  height: 80px;
+  margin: auto;
+  
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+justify-self: center;
+/* justify-content: center; */
+/* align-self: center; */
+/* margin-top: 100px; */
+margin-top: 100px;
+box-sizing: border-box;
+
+}
