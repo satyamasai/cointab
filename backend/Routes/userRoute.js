@@ -3,16 +3,10 @@ const axios = require("axios");
 const { userModel } = require("../Models/userModel");
 const userController = Router();
 
-userController.get("/fetch-user", async (req, res) => {
-  await axios
-    .get("https://randomuser.me/api/?results=5")
-    .then((result) => {
-      console.log("RES", result.data);
-      res.send(result.data.results)
-    })
-    .catch((err) => {
-      console.log("err", err);
-    });
+userController.get("/get-user", async (req, res) => {
+  const userData= await userModel.find();
+  console.log(userData)
+  res.send({userData})
 
 });
 
@@ -32,6 +26,16 @@ userController.get("/userdb",async (req,res)=>{
 
 
 })
+
+// for deleting all the data in database
+userController.delete("/delete-all",async (req,res)=>{
+
+        await userModel.deleteMany()
+
+        res.send({"msg":"user deleted successfully from db"})
+    })
+
+
 
 module.exports = {
   userController
