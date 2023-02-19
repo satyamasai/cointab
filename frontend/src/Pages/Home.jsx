@@ -8,7 +8,7 @@ const Home = () => {
   const handleFetchUser = async () => {
     setLoading(true);
 
-    await axios.get("http://localhost:8000/userdb").then((res) => {
+    await axios.get("https://cointab-v1zx.onrender.com/userdb").then((res) => {
       postIndb(res.data);
       console.log("user", res.data);
     });
@@ -18,15 +18,15 @@ const Home = () => {
   const postIndb = (users) => {
     setLoading(false);
     // console.log('users in db',users)
-    alert("Users saved in DATABASE");
+    alert("Users saved in DATABASE....");
   };
 
   // delete user 
-const deleteUsers=async()=>{
+ const deleteUsers=async()=>{
   setLoading(true)
   try{
     
-    await axios.delete("http://localhost:8000/delete-all")
+    await axios.delete("https://cointab-v1zx.onrender.com/delete-all")
     .then((res)=>console.log(res))
     setLoading(false)
 }
@@ -58,3 +58,4 @@ catch(err){
 };
 
 export default Home;
+

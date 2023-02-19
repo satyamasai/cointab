@@ -12,6 +12,7 @@ const TableContainer = ({item}) => {
                 <td>{item.gender}</td>
                 <td>{item.email}</td>
                 <td>{item.location.city}</td>
+                <td>{item.location.state}</td>
                 <td>{item.phone}</td>
             </tr>
   )
