@@ -49,7 +49,7 @@ catch(err){
           </Button>
           <Button onClick={deleteUsers} colorScheme={"red"}>Delete Users</Button>
           <Link to={"/user-details"}>
-          <Button colorScheme={"red"}> User Details</Button>
+          <Button colorScheme={"yellow"}> User Details</Button>
           </Link>
         </div>
       )}

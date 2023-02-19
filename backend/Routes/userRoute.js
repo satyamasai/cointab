@@ -4,9 +4,10 @@ const { userModel } = require("../Models/userModel");
 const userController = Router();
 
 userController.get("/get-user", async (req, res) => {
-  console.log(req.body)  
+  console.log(req.query,"query")
+  // console.log(req.body)  
   const userData= await userModel.find();
-  console.log(userData)
+  // console.log(userData)
   res.send({userData})
 
 });

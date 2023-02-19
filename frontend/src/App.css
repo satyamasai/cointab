@@ -1,8 +1,9 @@
- .App {
+.App {
   text-align: center;
 }
-body{
-  background-color: #333;
+body {
+  background-color: #03989e;
+  background-image: url("https://www.cointab.in/wp-content/uploads/2022/09/Untitled-design-31.png");
 }
 
 .App-logo {
@@ -40,41 +41,48 @@ body{
   }
 }
 
-.navbar{
+.navbar {
   width: 100%;
   height: 60px;
   background-color: rgb(133, 228, 228);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-image: url("https://www.cointab.in/wp-content/uploads/2022/09/Untitled-design-31.png");
 }
-.home{
+.home {
   width: 100vw;
-background-color: #282c34;
-height: 100vh;
-/* display: flex; */
-/* justify-content: space-around; */
-box-sizing: border-box;
-display: inline-block;
+  background-color:
+  #03989e;
+  height: 100vh;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  box-sizing: border-box;
+  display: inline-block;
+  background-image: url("https://www.cointab.in/wp-content/uploads/2022/09/Untitled-design-31.png");
 }
-.home>div{
+.home > div {
   width: 80vw;
   height: 80px;
   margin: auto;
-  
+
   border: 1px solid red;
   display: flex;
   justify-content: space-around;
-align-items: center;
-justify-self: center;
-/* justify-content: center; */
-/* align-self: center; */
-/* margin-top: 100px; */
-margin-top: 100px;
-box-sizing: border-box;
-
+  align-items: center;
+  justify-self: center;
+  backdrop-filter: blur(1px) saturate(100%);
+  -webkit-backdrop-filter: blur(8px) saturate(100%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  /* justify-content: center; */
+  /* align-self: center; */
+  /* margin-top: 100px; */
+  margin-top: 100px;
+  box-sizing: border-box;
 }
-.loader{
+.loader {
   /* border: 1px solid red; */
   margin: auto;
   width: 60%;
@@ -82,63 +90,110 @@ box-sizing: border-box;
   margin-top: 8vh;
 }
 
-.userDetailPage{
+.userDetailPage {
   width: 100%;
   /* height: 100vh; */
   display: inline-block;
   background-color: #333;
   color: white;
 }
-.loader2{
+.loader2 {
   /* border: 1px solid red; */
   margin: 100px auto;
   border-radius: 9999px;
 }
 /* table for user */
-.userTable{
+.userTable {
   margin: auto;
+  box-sizing: content-box;
 }
 
 /* filter_comp */
-.filterComp{
+.filterComp {
   width: 100%;
 
   height: 100px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
-.filterComp>div{
+.filterComp > div {
   /* align-items: flex-start; */
-  width: 10%;
+  /* width: 10%; */
   /* border: 1px solid blue; */
   /* margin: auto; */
   text-align: left;
   font-size: 14px;
+  display: flex;
   align-items: center;
-  color:#61dafb;
+  color: #61dafb;
   padding: 10px;
   /* display: flex; */
   /* flex-direction: column; */
 }
-label{
+label {
   /* border: 1px solid red; */
   margin-left: 10px !important;
+/* color: green; */
 }
-input{
-  /* margin-left: 10px; */
+.gender input{
+  border: 1px solid red;
+  margin-left: 10px;
+/* color: green; */
 }
 
 /* table */
 
-table,tr,th{
+table,
+tr,
+th {
   padding: 5px;
-  border: 2px solid rgb(230, 17, 17);
+  border: 2px solid rgb(235, 218, 218);
   margin: auto;
 }
 
-.detailTr,td{
+.detailTr,
+td {
   /* margin: 5px ; */
   /* padding: 2px; */
   border: 2px solid rgb(9, 194, 194);
   box-sizing: border-box;
+}
 
+
+/* pagination */
+.pagination{
+  width: 60%;
+  height: 50px;
+  border: 1px solid red;
+  margin: auto;
+}
+.pbtn{
+  border: 1px solid grey;
+  margin: 5px;
+  border-radius: 10px;
+  height: 30px;
+  background-color: #03989e;
+  color: black;
+  padding: 2px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+.centerbtn{
+  width: 24px;
+}
+
+.pbtn:hover{
+  background-color: #097275;
+  color: white;
+}
+
+/* filter city css */
+.filtercity{
+  /* border: 1px solid red; */
+  margin-left: 20px;
+}
+.filtercity>select{
+  /* border: 1px solid blue; */
+  /* color: green; */
+  background-color: #282c34;
 }
